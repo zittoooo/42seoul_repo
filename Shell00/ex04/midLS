@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ls -Amp --sort=time -r  // -r 없으면 최신 순서로 
