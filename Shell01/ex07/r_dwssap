@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tac /etc/passwd | sed -n "2, \$p" | awk -F: '{print $1}' | sort -r  | sed -n "1,5p" | tr '\n' ','
+
