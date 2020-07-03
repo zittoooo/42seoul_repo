@@ -1,4 +1,2 @@
 #!/bin/sh
-awk -F ':' '{print $1}' /etc/group
-
-
+id -Gn $FT_USER | tr " " "," | tr -d '\n'
