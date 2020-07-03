@@ -1,2 +1,3 @@
 #!/bin/sh
-ls -l | sed -n '2~2p'
+
+ls  -l | sed -n "n;p"
