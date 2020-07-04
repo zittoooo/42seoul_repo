@@ -3,11 +3,6 @@
 int		rush(int x, int y);
 void	ft_putchar(char c);
 
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int rush(int x, int y)
 {
 	int i=0, j=0;

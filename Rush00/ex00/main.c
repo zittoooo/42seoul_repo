@@ -1,5 +1,3 @@
-#include <unistd>
-
 int main()
 {
 	rush(5,5);
