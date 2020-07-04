@@ -1,3 +1,6 @@
+#include "func.h"
+
+
 int		rush(int x, int y);
 
 int rush(int x, int y)
@@ -31,7 +34,7 @@ int rush(int x, int y)
 			}
 		}
 		j++;
-		write(1, "\n", 1);	
+		ft_putchar('\n');	
 	}
 	return (0);
 }

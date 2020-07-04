@@ -1,3 +1,5 @@
+#include "func.h"
+
 int main()
 {
 	rush(5,5);
