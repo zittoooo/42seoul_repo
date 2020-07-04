@@ -11,12 +11,11 @@ int rush(int x, int y)
 		i = 0;
 		while(i < x)
 		{
-			if( (i == 0 | i == x-1) && ( j == 0 | j == x-1) )
+			if( (i == 0 | i == x-1) && ( j == 0 | j == y-1) )
 			{
 				write(1, "o", 1);
 				i++;
 			}
-
 
 			else if( (j == 0  | j == y-1)   && ( i != 0 | i != x-1 ))
 			{
@@ -30,13 +29,11 @@ int rush(int x, int y)
 				i++;			
 			}
 
-
 			else
 			{ 
 				write(1, " ", 1);
 				i++;
 			}
-
 		}
 
 		j++;
@@ -48,6 +45,6 @@ int rush(int x, int y)
 
 int main()
 {
-	rush(4,4);
+	rush(1,5);
 	return (0);
 }
