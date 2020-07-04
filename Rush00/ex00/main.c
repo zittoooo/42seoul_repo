@@ -1,7 +1,7 @@
 #include "func.h"
 
-int main()
+int		main(void)
 {
-	rush(5,5);
+	rush(5, 1);
 	return (0);
 }
