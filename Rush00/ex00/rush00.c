@@ -6,12 +6,12 @@
 /*   By: jiholee </var/mail/jiholee>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 16:22:09 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/04 17:11:21 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/04 19:23:30 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "func.h"
 
-void	rush(int y, int x)
+void	rush(int x, int y)
 {
 	int col;
 	int row;
