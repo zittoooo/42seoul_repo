@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/05 14:46:38 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/05 14:59:57 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/05 14:00:36 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/05 14:43:10 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_reverse_alphabet(void)
 {
-	write(1, &c, 1);
-}
-
-void	ft_print_numbers(void)
-{
-	char n;
-
-	n = 48;
-	while (n <= 57)
-	{
-		ft_putchar(n);
-		n = n + 1;
-	}
+	write(1, "zyxwvutsrqponmlkjihgfedcba", 26);
 }
