@@ -48,48 +48,51 @@ void	ft_putnbr(int nb)
 	else if (nb < 0)  // 음수
 	{
 			
-		int tmp[10];
+		unsigned char tmp[10];
 	    int i;
 		int arr[10];
 		int j;
 		int count;
-
+		unsigned char nb_nb;
+		
 		count = 0;
 		i = 0;
 
-		nb *= -1;  // 양수로 바꾸기  
-		
-		/*
-		// -2147483648 예외처리해주기ㅠ
-		if(예외)
+		if(nb == -2147483648)
 		{
-			arr[i] = 2
-				
-		
+			nb_nb = nb + 1;
+			nb_nb *= -1;
+			nb_nb += 1;
+			printf("%u\n", nb_nb);
+		}	
+		else
+		{
+			nb *= -1;  // 양수로 바꾸기  
+			nb_nb = nb;
 		}
 
-		*/
 
-		printf("%d\n", nb);
+		printf("%u\n", nb_nb);
+
 		while(i < 10)
 		{
-			if(nb == 0)
+			if(nb_nb == 0)
 			{
 				break;
 			}
 			else
 		   	{
-			tmp[i] = nb % 10;
-			nb /= 10;			
-			i++;
-			count++;  // 몇자리수인가
+				tmp[i] = nb_nb % 10;
+				nb_nb /= 10;			
+				i++;
+				count++;  // 몇자리수인가
 			}
 		}
 		
 		i = 0;
 		j = count - 1;
 		
-		//ft_putchar('-');	
+		ft_putchar('-');	
 		while(i < count)
 		{
 			arr[i] = tmp[j];
@@ -97,6 +100,7 @@ void	ft_putnbr(int nb)
 			i++;
 			j--;
 		}
+	
 	
 	}
 
