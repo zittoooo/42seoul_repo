@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 14:54:11 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/06 14:57:27 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/06 15:04:15 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/06 15:04:49 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+int		ft_strlen(char *str)
 {
-	write(1, str, sizeof(str));
+	int count;
+
+	count = 0;
+	while (*str != '\0')
+	{
+		str++;
+		count++;
+	}
+	return (count);
 }
