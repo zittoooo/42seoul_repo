@@ -6,7 +6,7 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 14:54:11 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/06 14:57:27 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/06 19:30:30 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr(char *str)
 {
-	write(1, str, sizeof(str));
+	while(*str)
+		write(1, str++, 1);
 }
