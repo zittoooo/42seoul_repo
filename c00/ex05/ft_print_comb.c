@@ -6,7 +6,7 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 19:44:14 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/05 20:32:09 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/06 10:36:45 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,4 @@ void	ft_print_end(char c, char c1, char c2)
 		write(1, "", 1);
 	else
 		write(1, ", ", 2);
-}
-
-int		main(void)
-{
-	ft_print_comb();
-	return (0);
 }
