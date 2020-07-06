@@ -6,7 +6,7 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 19:44:14 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/06 16:36:23 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/06 19:00:38 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	ft_print_comb(void)
 			k = j + 1;
 			while (k <= '9')
 			{
-				ft_putchar(i , j, k);
-				if (i != '7' || j != '8' || k != '9')
+				ft_putchar(i, j, k);
+				if (!(i == '7' && j == '8' && k == '9'))
 				{
 					write(1, ",", 1);
 					write(1, " ", 1);
@@ -46,10 +46,4 @@ void	ft_print_comb(void)
 		}
 		i++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_comb();
-	return (0);
 }

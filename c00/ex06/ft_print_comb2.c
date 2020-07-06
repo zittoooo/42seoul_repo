@@ -6,7 +6,7 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 10:01:45 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/06 16:26:53 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/06 19:02:22 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,32 +39,24 @@ void	print_num(int x)
 void	ft_print_comb2(void)
 {
 	int i;
-	int o;
+	int j;
 
 	i = 0;
 	while (i < 99)
 	{
-		o = i + 1;
-		while (o <= 99)
+		j = i + 1;
+		while (j <= 99)
 		{
 			print_num(i);
 			ft_putchar(' ');
-			print_num(o);
-			if (i == 98 && o == 99)
-			{
-				ft_putchar('\0');
-			}
-			else
+			print_num(j);
+			if (!(i == 98 && j == 99))
 			{
 				ft_putchar(',');
 				ft_putchar(' ');
 			}
-			o++;
+			j++;
 		}
 		i++;
 	}
-}
-
-int	main(void){
-ft_print_comb2();
 }
