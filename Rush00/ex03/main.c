@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	rush(4, 4);
+	rush(5, 3);
 	return (0);
 }

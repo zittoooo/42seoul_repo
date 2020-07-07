@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiholee </var/mail/jiholee>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 20:29:20 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/07 20:29:24 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/04 16:24:54 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/04 16:24:55 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+#include <unistd.h>
+#include "func.h"
+
+void	ft_putchar(char c)
 {
-	int i;
-	
-	i = 0;
-	while(src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-		
-	dest[i] = '\0';
-	return dest;
+	write(1, &c, 1);
 }
