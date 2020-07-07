@@ -18,13 +18,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 int		main()
 {
 	char dest[5] = "";
-	char str[] = {'a', 'b', 'c', 'd', 'f' };
+	char str[10] = {'a', 'b', 'c', 'd'};
 		
 	ft_strncpy(dest, str, 5);
 
 
-	char dest2[5] = "";
-	char str2[] = {'a', 'b', 'c', 'd', 'f' };
+	char dest[5] = "";
+	char str2[10] = {'a', 'b', 'c', 'd'};
 
 	strncpy(dest2, str2, 5);
 	
