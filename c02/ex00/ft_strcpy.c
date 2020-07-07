@@ -6,7 +6,7 @@ char	*ft_strcpy(char *dest, char *src)
 	int i;
 	
 	i = 0;
-	while(*src)
+	while(src[i])
 	{
 		dest[i] = src[i];
 		i++;
@@ -25,8 +25,9 @@ int main()
 
 	printf("ft_strcpy : %s\n", s2);
 
-	char *s3 = "abcd";
-	char *s4= "";
+	char s3[5] = "abcd";
+	char s4[10];
+
 	strcpy(s4, s3);
 	printf("strcpy : %s\n", s4);
 
