@@ -3,7 +3,7 @@
 
 int		ft_str_is_alpha(char *str)
 {
-	if(*str == '\0') // empty
+	if (str[0] == '\0') // empty
 		return 1;
 
 	while(*str++)
@@ -13,10 +13,12 @@ int		ft_str_is_alpha(char *str)
 
 		else if (*str >= 97 && *str <= 122)  // a~z
 			return 1;
-		else   
+		else 
 			return 0;
+
 	}
-	return 1;
+
+	return -1;
 }
 
 int		main(void)
@@ -24,9 +26,9 @@ int		main(void)
 	char *str1 = "@i@";
 	char *str2 = "1234";
 	char *str3 = "";
-	int res1 = ft_str_is_alpha(str1);
-	int res2 = ft_str_is_alpha(str2);
-	int res3 = ft_str_is_alpha(str3);
+	int res1 = ft_str_is_alpha(str1);  // 1
+	int res2 = ft_str_is_alpha(str2);  // 0
+	int res3 = ft_str_is_alpha(str3);  // 1
 	printf("%d %d %d", res1, res2, res3);
 	return 0;
 }
