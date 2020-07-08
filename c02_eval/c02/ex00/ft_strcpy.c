@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jiholee </var/mail/jiholee>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 11:04:14 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/08 12:08:39 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/07 20:29:20 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/08 13:27:06 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_ft(int *nbr)
+char	*ft_strcpy(char *dest, char *src)
 {
-	*nbr = 42;
+	int i;
+	
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+		
+	dest[i] = '\0';
+	return dest;
 }

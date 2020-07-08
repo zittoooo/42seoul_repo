@@ -1,5 +1,14 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/08 13:29:26 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/08 13:33:16 by jiholee          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int		ft_str_is_alpha(char *str)
 {
@@ -19,16 +28,4 @@ int		ft_str_is_alpha(char *str)
 	}
 
 	return -1;
-}
-
-int		main(void)
-{
-	char *str1 = "@i@";
-	char *str2 = "1234";
-	char *str3 = "";
-	int res1 = ft_str_is_alpha(str1);  // 1
-	int res2 = ft_str_is_alpha(str2);  // 0
-	int res3 = ft_str_is_alpha(str3);  // 1
-	printf("%d %d %d", res1, res2, res3);
-	return 0;
 }
