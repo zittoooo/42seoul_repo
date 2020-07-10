@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_alpha_test.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jiholee </var/mail/jiholee>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 13:28:46 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/09 23:05:08 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/09 17:24:36 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/09 17:26:25 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int		ft_str_is_alpha(char *str)
 {
 	int i;
 
 	i = 0;
-	while (n)
+	if (str[i] == '\0')
+		return (1);
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
+			return (0);
 		i++;
-		n--;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }

@@ -1,28 +1,29 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/08 15:52:24 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/10 10:23:47 by jiholee          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
 			str[i] += 32;
 			i++;
 		}
 		else
-			i++;	
+			i++;
 	}
-	return str;
-}
-
-int		main(void)
-{
-	char str1[5] = "ABCD";
-	char *str2 = "";
-
-	str2 = ft_strlowcase(str1);	
-	printf("%s", str2);
+	return (str);
 }

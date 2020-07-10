@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiholee </var/mail/jiholee>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 20:29:20 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/08 13:28:30 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/09 15:45:19 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/09 23:03:23 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
-	
-	i = 0;
-	while (src[i])
+	char *ret;
+
+	ret = dest;
+	while(*src != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		*dest++ = *src++;
 	}
-		
-	dest[i] = '\0';
-	return dest;
+	*dest = '\0';
+	return ret;
 }

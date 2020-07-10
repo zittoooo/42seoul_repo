@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jiholee </var/mail/jiholee>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 13:28:46 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/09 23:05:08 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/09 15:45:19 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/09 15:55:09 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <stdio.h>
+char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	char *ret;
 
-	i = 0;
-	while (n)
+	ret = dest;
+	while(*src != '\0')
 	{
-		dest[i] = src[i];
-		i++;
-		n--;
+		*dest++ = *src++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	*dest = '\0';
+	return ret;
+}
+
+int main()
+{
+	char s1[] = "fd";
+	char s2[] = "a";
+	
+	ft_strcpy(s1, s2);
+	printf("%s",s1);
 }

@@ -6,26 +6,31 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 13:29:26 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/08 13:33:16 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/09 17:17:29 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_alpha(char *str)
 {
-	if (str[0] == '\0') // empty
-		return 1;
+	int i;
+	int count;
 
-	while(*str++)
+	i = 0;
+	count = 0;
+	if (str[0] == '\0')
+		return (1);
+	while (str[i])
 	{
-		if (*str >= 65 && *str <= 90)   // A~Z
-			return 1;
-
-		else if (*str >= 97 && *str <= 122)  // a~z
-			return 1;
-		else 
-			return 0;
-
+		if ((str[i] >= 'a' && *str <= 'z') | (str[i] >= 'A' && str[i] <= 'Z'))
+		{
+			count++;
+			i++;
+		}
+		else
+			i++;
 	}
-
-	return -1;
+	if (count == i)
+		return (1);
+	else
+		return (0);
 }

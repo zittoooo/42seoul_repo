@@ -1,29 +1,29 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/08 15:51:47 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/08 17:06:10 by jiholee          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strupcase(char *str)
 {
 	int i;
-	i = 0;
 
-	while(str[i])
+	i = 0;
+	while (str[i])
 	{
-		if(str[i] >= 'a' && str[i] <= 'z' )  // a~z
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] -= 32;
 			i++;
 		}
 		else
 			i++;
-	}		
-	return str;
-}
-
-int main()
-{
-	char str[5] = "abcD";
-	char *str1 = "" ;
-	str1 = ft_strupcase(str);
-	printf("%s", str1);
-
+	}
+	return (str);
 }

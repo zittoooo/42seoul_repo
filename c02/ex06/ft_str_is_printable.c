@@ -1,5 +1,14 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/08 15:51:12 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/08 18:49:29 by jiholee          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int		ft_str_is_printable(char *str)
 {
@@ -8,13 +17,11 @@ int		ft_str_is_printable(char *str)
 
 	i = 0;
 	count = 0;
-
-	if(str[0] == '\0')
-		return 1;
-
-	while(str[i])
+	if (str[0] == '\0')
+		return (1);
+	while (str[i])
 	{
-		if(str[i] >= 33 && str[i] <= 127)
+		if (str[i] >= 32 && str[i] <= 126)
 		{
 			count++;
 			i++;
@@ -22,18 +29,8 @@ int		ft_str_is_printable(char *str)
 		else
 			i++;
 	}
-
-	if(count == i)
-		return 1;
+	if (count == i)
+		return (1);
 	else
-		return 0;
+		return (0);
 }
-
-
-int		main(void)
-{
-	char *c;
-	printf("%d", ft_str_is_printable(c));
-	return (0);
-}
-

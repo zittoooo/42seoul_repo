@@ -1,3 +1,13 @@
+#include <stdio.h>
+
+void		is_lower(char *str, int *i, int *j)
+{
+	if (str[*i] >= 'a' && str[*i] <= 'z')
+	{
+		(*i)++;
+		(*j)++;
+	}	
+}
 
 char		*ft_strcapitalize(char *str)
 {
@@ -8,16 +18,10 @@ char		*ft_strcapitalize(char *str)
 	j = 0;
 	while (str[j])
 	{
-		if(i == 0)
-		{
-			if(str[j] >= 'a' && str[j] <= 'z')
-			{
-				str[j] -= 32;
-				i++;
-				j++;
-			}
+		if(i == 0){
+			is_lower(&str[j], &i, &j);
 
-			else if(str[j] >= 'A' && str[j] <= 'Z')
+			if(str[j] >= 'A' && str[j] <= 'Z')
 			{
 				i++;
 				j++;
@@ -34,7 +38,6 @@ char		*ft_strcapitalize(char *str)
 				i = 0;
 			}
 		}
-
 		else
 		{
 			
