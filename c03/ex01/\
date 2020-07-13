@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jiholee </var/mail/jiholee>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 10:33:37 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/13 16:50:58 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/09 14:50:31 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/13 10:29:24 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (*s1 || *s2)
+	while (n)
 	{
 		if (*s1 != *s2)
-			return (*s1 - *s2);
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
 		s1++;
 		s2++;
+		n--;
 	}
-	return (*s1 - *s2);
+	return (0);
 }

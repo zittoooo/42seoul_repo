@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 10:33:37 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/13 16:50:58 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/13 17:37:14 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/13 17:42:49 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	while (*s1 || *s2)
+	char *ret;
+	int i;
+	int j;
+
+	ret = dest;
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (nb > 0)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		dest[i] = src[j];
+		i++;
+		j++;
+		nb--;
 	}
-	return (*s1 - *s2);
+	dest[i] = '\0';
+	return (ret);
 }

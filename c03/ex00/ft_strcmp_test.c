@@ -6,18 +6,27 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 10:33:37 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/13 16:50:58 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/13 13:39:13 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 int		ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 || *s2)
 	{
 		if (*s1 != *s2)
-			return (*s1 - *s2);
+				return (*s1 - *s2);
 		s1++;
 		s2++;
 	}
 	return (*s1 - *s2);
+}
+
+int		main(void)
+{
+	char s1[] = "abcd";
+	char s2[] = "abce";
+	printf("%d\n", ft_strcmp(s1, s2));
+
 }

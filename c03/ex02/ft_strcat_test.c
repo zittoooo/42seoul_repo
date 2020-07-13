@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 10:33:37 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/13 16:50:58 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/13 10:35:56 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/13 17:22:56 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#include <stdio.h>
+
+char	*ft_strcat(char *dest, char *src)
 {
-	while (*s1 || *s2)
-	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
+	char *ret;
+	int i;
+	int j;
+
+	ret = dest;
+	i = 0;
+	j = 0;
+	while (src[i] != '\0')
+		i++;
+	while (dest[j] != '\0')
+		dest++;
+	while (i-- > 0)
+		*dest++ = *src++;
+
+	*dest = '\0';
+	return (ret);
+}
+
+int		main()
+{
+	char str1[10] = "hi";
+	char str2[10] = "hello";
+
+	ft_strcat(str1, str2);
+	printf("%s", str1);
 }
