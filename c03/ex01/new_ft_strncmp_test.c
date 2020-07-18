@@ -1,43 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 10:35:56 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/14 17:45:09 by jiholee          ###   ########.fr       */
+/*   Created: 2020/07/13 10:34:00 by jiholee           #+#    #+#             */
+/*   Updated: 2020/07/15 11:00:22 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcat(char *dest, char *src)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char *ret;
-	int i;
-	int j;
-
-	ret = dest;
-	i = 0;
-	j = 0;
-	while (src[i] != '\0')
-		i++;
-	while (*dest != '\0')
-		dest++;
-	while (i-- > 0)
-		*dest++ = *src++;
-
-	*dest = '\0';
-	return (ret);
+	while ((*s1 || *s2) && n-- > 0)
+	{
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+	}
+	return (0);
 }
 
-int		main()
-{
-	char str1[10] = "hi";
-	char str2[10] = "hello";
+#include <stdio.h>
 
-	ft_strcat(str1, str2);
-	printf("%s", str1);
+int	main()
+{
+	char *s1 = "abc";
+	char *s2 = "acd";
+
+	printf("%d", ft_strncmp(s1, s2, 2));
 
 }

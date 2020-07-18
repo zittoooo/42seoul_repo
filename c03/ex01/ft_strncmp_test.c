@@ -6,20 +6,19 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 10:34:00 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/13 13:50:17 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/15 10:57:24 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (n)
+	while (n--)
 	{
-		if (*s1 != *s2 && n > 0)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
+		if (*s1 != *s2)
+			return (*s1 - *s2);
 		s1++;
 		s2++;
-		n--;
 	}
 	return (0);
 }

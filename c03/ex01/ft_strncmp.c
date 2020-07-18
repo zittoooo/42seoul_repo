@@ -6,19 +6,18 @@
 /*   By: jiholee <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 10:34:00 by jiholee           #+#    #+#             */
-/*   Updated: 2020/07/13 16:58:04 by jiholee          ###   ########.fr       */
+/*   Updated: 2020/07/15 11:00:39 by jiholee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (n)
+	while ((*s1 || *s2) && n-- > 0)
 	{
 		if (*s1 != *s2)
-			return (*s1 - s2);
+			return (*s1 - *s2);
 		s1++;
 		s2++;
-		n--;
 	}
 	return (0);
 }
